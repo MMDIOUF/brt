@@ -1,0 +1,250 @@
+/* ─── SHADCN DESIGN TOKENS ─── */
+:root {
+	--brt-blue: #1A6FA4;
+	--brt-green: #1D9E75;
+	--brt-orange: #E17A47;
+	--brt-red: #E05252;
+	--brt-yellow: #F2CC8F;
+	--brt-purple: #8B5CF6;
+	--brt-gray-50: #F8FAFC;
+	--brt-gray-100: #F1F5F9;
+	--brt-gray-200: #E2E8F0;
+	--brt-gray-300: #CBD5E1;
+	--brt-gray-400: #94A3B8;
+	--brt-gray-500: #64748B;
+	--brt-gray-600: #475569;
+	--brt-gray-700: #334155;
+	--brt-gray-800: #1E293B;
+	--brt-gray-900: #0F172A;
+	--brt-gray-950: #020617;
+	--background: #0D1117;
+	--foreground: #E6EDF3;
+	--muted: #161B22;
+	--muted-foreground: #8B949E;
+	--popover: #161B22;
+	--popover-foreground: #E6EDF3;
+	--card: #161B22;
+	--card-foreground: #E6EDF3;
+	--border: #30363D;
+	--input: #21262D;
+	--primary: #1A6FA4;
+	--primary-foreground: #E6EDF3;
+	--secondary: #21262D;
+	--secondary-foreground: #E6EDF3;
+	--accent: #30363D;
+	--accent-foreground: #E6EDF3;
+	--destructive: #E05252;
+	--destructive-foreground: #E6EDF3;
+	--ring: #1A6FA4;
+	--radius: 8px;
+}
+
+/* ─── GLOBAL ─── */
+* { box-sizing: border-box; }
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Helvetica, Arial, sans-serif;
+	background: var(--background);
+	color: var(--foreground);
+	-webkit-font-smoothing: antialiased;
+	line-height: 1.5;
+	font-size: 14px;
+}
+
+/* ─── SCROLLBAR CUSTOM ─── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--background); }
+::-webkit-scrollbar-thumb { background: var(--muted); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--muted-foreground); }
+
+/* ─── ANIMATIONS ─── */
+@keyframes pulse {
+	0%, 100% { opacity: 1; transform: scale(1); }
+	50% { opacity: 0.4; transform: scale(0.95); }
+}
+@keyframes fadeInUp {
+	from { opacity: 0; transform: translateY(12px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+@keyframes countUp {
+	from { opacity: 0; transform: translateY(8px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideInLeft {
+	from { opacity: 0; transform: translateX(-16px); }
+	to { opacity: 1; transform: translateX(0); }
+}
+
+/* ─── COMPOSANTS ─── */
+.live-dot { animation: pulse 2s ease-in-out infinite; display: inline-block; }
+.kpi-card {
+	animation: fadeInUp 0.4s ease forwards;
+	transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+	background: var(--card);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	padding: 20px;
+}
+.kpi-card:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 12px 32px rgba(26, 111, 164, 0.15);
+	border-color: rgba(26, 111, 164, 0.4);
+}
+.kpi-value {
+	font-variant-numeric: tabular-nums;
+	animation: countUp 0.6s ease forwards;
+	font-weight: 600;
+	font-size: 24px;
+	color: var(--foreground);
+}
+.sidebar-item {
+	transition: background 0.15s ease, color 0.15s ease, border-left-color 0.15s ease;
+	border-radius: var(--radius);
+	padding: 8px 12px;
+	margin: 2px 0;
+	cursor: pointer;
+}
+.sidebar-item:hover { background: rgba(26, 111, 164, 0.12); }
+.sidebar-item.active {
+	background: rgba(26, 111, 164, 0.08);
+	border-left: 2px solid var(--brt-blue);
+	color: var(--brt-blue);
+}
+.page-enter { animation: fadeInUp 0.25s ease forwards; }
+.filter-bar select {
+	background: var(--input);
+	border: 1px solid var(--border);
+	color: var(--foreground);
+	border-radius: var(--radius);
+	padding: 6px 10px;
+	font-size: 13px;
+	cursor: pointer;
+	transition: border-color 0.15s ease;
+}
+.filter-bar select:focus { border-color: var(--ring); outline: none; }
+.chart-container {
+	background: var(--card);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	padding: 20px;
+	transition: border-color 0.2s ease;
+}
+.chart-container:hover { border-color: rgba(26, 111, 164, 0.4); }
+
+/* ─── BADGES / TABLES ─── */
+.badge {
+	padding: 4px 10px;
+	border-radius: 999px;
+	font-size: 12px;
+	font-weight: 500;
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+}
+.badge.green {
+	background: rgba(29,158,117,0.12);
+	color: var(--brt-green);
+	border: 1px solid rgba(29,158,117,0.18);
+}
+.badge.orange {
+	background: rgba(225,122,71,0.12);
+	color: var(--brt-orange);
+	border: 1px solid rgba(225,122,71,0.18);
+}
+.badge.red {
+	background: rgba(224,82,82,0.12);
+	color: var(--brt-red);
+	border: 1px solid rgba(224,82,82,0.18);
+}
+
+/* ─── BUTTONS ─── */
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+	padding: 8px 16px;
+	border-radius: var(--radius);
+	font-size: 14px;
+	font-weight: 500;
+	cursor: pointer;
+	transition: all 0.15s ease;
+	border: 1px solid transparent;
+	text-decoration: none;
+}
+.btn-primary {
+	background: var(--primary);
+	color: var(--primary-foreground);
+}
+.btn-primary:hover {
+	background: var(--primary);
+	opacity: 0.9;
+}
+.btn-secondary {
+	background: var(--secondary);
+	color: var(--secondary-foreground);
+	border-color: var(--border);
+}
+.btn-secondary:hover {
+	background: var(--accent);
+}
+.btn-ghost {
+	background: transparent;
+	color: var(--foreground);
+}
+.btn-ghost:hover {
+	background: var(--accent);
+}
+
+/* ─── INPUTS ─── */
+.input {
+	background: var(--input);
+	border: 1px solid var(--border);
+	color: var(--foreground);
+	border-radius: var(--radius);
+	padding: 8px 12px;
+	font-size: 14px;
+	transition: border-color 0.15s ease;
+}
+.input:focus {
+	border-color: var(--ring);
+	outline: none;
+}
+
+/* ─── CARDS ─── */
+.card {
+	background: var(--card);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	padding: 16px;
+}
+
+/* ─── TABLES ─── */
+.table {
+	width: 100%;
+	border-collapse: collapse;
+}
+.table th, .table td {
+	padding: 12px;
+	text-align: left;
+	border-bottom: 1px solid var(--border);
+}
+.table th {
+	font-weight: 600;
+	color: var(--foreground);
+}
+.table td {
+	color: var(--muted-foreground);
+}
+.table tr:hover {
+	background: var(--accent);
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 768px) {
+	.kpi-grid { grid-template-columns: repeat(2, 1fr) !important; }
+	.sidebar { width: 64px !important; }
+	.sidebar .sidebar-label { display: none !important; }
+}
+@media (max-width: 480px) {
+	.kpi-grid { grid-template-columns: 1fr !important; }
+}

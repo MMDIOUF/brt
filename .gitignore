@@ -1,0 +1,26 @@
+.states
+assets/external/
+.web
+*.py[cod]
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+.venv/
+venv/
+
+# Reflex
+.web/
+.states/
+*.db
+
+# Data
+brt_dakar_app/data/brt_clean.parquet
+
+# Node
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db

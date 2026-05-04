@@ -1,0 +1,51 @@
+{
+  "scraped_at": "2026-05-03T16:32:18.217544",
+  "source": "sunubrt.sn · Dakar Mobilité",
+  "fallback": true,
+  "news": [
+    {
+      "title": "SunuBRT inaugure sa première extension de ligne",
+      "date": "2025-01-14",
+      "excerpt": "Le réseau BRT de Dakar étend son corridor vers de nouvelles zones de Guédiawaye pour mieux desservir les quartiers Nord.",
+      "url": "https://www.sunubrt.sn",
+      "image": "https://www.sunubrt.sn/app/uploads/2025/12/Prolongement-2-747x1024.jpg",
+      "tag": "Réseau"
+    },
+    {
+      "title": "Zéro harcèlement dans les transports — Programme actif",
+      "date": "2025-03-08",
+      "excerpt": "SunuBRT renforce ses engagements en matière de sécurité et de respect pour tous les voyageurs, avec un focus sur la protection des femmes.",
+      "url": "https://www.sunubrt.sn",
+      "image": "https://www.sunubrt.sn/app/uploads/iris-images/7942/zero-harcelement-dans-les-transports-360x260-f50_50.webp",
+      "tag": "Sécurité"
+    },
+    {
+      "title": "Abonnement jeune — Tarif préférentiel pour les étudiants",
+      "date": "2025-04-01",
+      "excerpt": "SunuBRT lance un abonnement mensuel à tarif réduit pour les jeunes de moins de 26 ans et les étudiants dakarois.",
+      "url": "https://www.sunubrt.sn",
+      "image": "https://www.sunubrt.sn/app/uploads/2025/04/sunuBRT-abonnement-jeune.png",
+      "tag": "Tarification"
+    },
+    {
+      "title": "SunuCRC — Centre de Relation Client opérationnel",
+      "date": "2024-11-15",
+      "excerpt": "Le nouveau centre de relation client SunuBRT répond aux demandes 6j/7 par téléphone, email et formulaire en ligne.",
+      "url": "https://www.sunubrt.sn",
+      "image": "https://www.sunubrt.sn/app/uploads/iris-images/3785/SunuCRC-460x260-f50_50.jpeg",
+      "tag": "Service client"
+    }
+  ],
+  "service_alerts": [],
+  "network_info": {
+    "lines_count": 3,
+    "stations_count": 23,
+    "km": 18.3,
+    "fleet_size": 144,
+    "fleet_type": "100% électrique (BYD K9)",
+    "capacity_per_day": 300000,
+    "inauguration": "2024-01-14",
+    "operator": "Dakar Mobilité",
+    "tariff_fcfa": 350
+  }
+}

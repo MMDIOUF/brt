@@ -1,0 +1,10 @@
+{
+  "generated_at": "2026-05-04T13:36:37",
+  "source": "brt data.xlsx",
+  "rows": 100000,
+  "n_days": 364,
+  "network_score": 75,
+  "otp_pct": 73.3,
+  "daily_pax": 17730,
+  "pain_index": 43.8
+}
